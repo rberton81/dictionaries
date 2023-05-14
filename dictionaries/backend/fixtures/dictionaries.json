@@ -1,0 +1,22 @@
+[
+  {
+    "model": "backend.dictionary",
+    "pk": 1,
+    "fields": {
+      "base_url": "https://wordsapiv1.p.rapidapi.com/",
+      "name": "WordsAPI",
+      "rate_limit_value": 2500,
+      "rate_limit_type": "rpd"
+    }
+  },
+  {
+    "model": "backend.dictionary",
+    "pk": 2,
+    "fields": {
+      "base_url": "https://wordsapiv1.p.rapidapi.com/",
+      "name": "WordsAPIClient",
+      "rate_limit_value": 2500,
+      "rate_limit_type": "rpd"
+    }
+  }
+]

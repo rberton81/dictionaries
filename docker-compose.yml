@@ -1,0 +1,26 @@
+version: '2.1'
+services:
+  # redis:
+  #   image: redis:alpine
+  #   ports:
+  #     - "6379:6379"
+  #   hostname: redis
+
+  mysql:
+    image: mysql/mysql-server:latest
+    hostname: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=dictionaries
+      - MYSQL_ROOT_PASSWORD=dictionaries
+      - MYSQL_ROOT_HOST=%
+    volumes:
+      - dictionaries-mysql:/src/dictionaries/mysql/dictionaries-mysql # You'll need to create this directory
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-u", "root", "-pdictionaries", "ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+
+volumes:
+  dictionaries-mysql:
