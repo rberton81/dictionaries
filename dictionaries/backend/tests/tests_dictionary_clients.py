@@ -1,7 +1,7 @@
 from django.test import TestCase
 from backend.models import DictWord, Dictionary
-from backend.dictionary_clients.TestAPIClient import TestAPIClient
-from backend.dictionary_clients.WordsAPIClient import WordsAPIClient
+from backend.clients.dictionary_clients.TestAPIClient import TestAPIClient
+from backend.clients.dictionary_clients.WordsAPIClient import WordsAPIClient
 
 class DictionaryClientTestCase(TestCase):
     fixtures = ["dictionaries.json"]

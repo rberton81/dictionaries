@@ -1,4 +1,6 @@
-from backend.dictionary_clients.BaseDictClient import BaseDictClient
+
+
+from dictionaries.backend.clients.clients.dictionary_clients.BaseDictClient import BaseDictClient
 
 
 class TestAPIClient(BaseDictClient):
